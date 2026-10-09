@@ -1,0 +1,80 @@
+/*
+  Temas de produto. Cada produto expõe variáveis --p-* (cores extraídas das
+  identidades oficiais em logos-produtos/) consumidas por cards e páginas.
+  A estrutura continua sendo do design system Rimivo; apenas a "pele" muda.
+*/
+
+[data-product] {
+  --p-bg: var(--color-bg-subtle);
+  --p-ink: var(--color-ink);
+  --p-ink-soft: var(--color-ink-soft);
+  --p-line: var(--color-border);
+  --p-accent: var(--color-accent);
+  --p-accent-2: var(--color-accent);
+  --p-on-accent: #ffffff;
+}
+
+/* Anilha — grafite #121417 / off-white #F5F5F2 / verde-limão #B7FF3B */
+[data-product='anilha'] {
+  --p-bg: #191a1c;
+  --p-ink: #f5f5f2;
+  --p-ink-soft: #b9bbb6;
+  --p-line: rgba(245, 245, 242, 0.24);
+  --p-accent: #b7ff3b;
+  --p-accent-2: #b7ff3b;
+  --p-on-accent: #121417;
+}
+
+/* EntregaManager — azul #1E5BD6 / laranja #FF7A00 / navy do logotipo */
+[data-product='entregamanager'] {
+  --p-bg: #edf3fd;
+  --p-ink: #07193d;
+  --p-ink-soft: #3e4f77;
+  --p-line: rgba(7, 25, 61, 0.22);
+  --p-accent: #1e5bd6;
+  --p-accent-2: #ff7a00;
+  --p-on-accent: #ffffff;
+}
+
+/* Trampo Fácil — azul #0269E1 / navy #000931 */
+[data-product='trampo-facil'] {
+  --p-bg: #eaf3fe;
+  --p-ink: #000931;
+  --p-ink-soft: #3b4f78;
+  --p-line: rgba(0, 9, 49, 0.22);
+  --p-accent: #0269e1;
+  --p-accent-2: #000931;
+  --p-on-accent: #ffffff;
+}
+
+/* É Massa Delivery — tomate / brasa #2C1611 / queijo / creme */
+[data-product='e-massa-delivery'] {
+  --p-bg: #fdf2e4;
+  --p-ink: #2c1611;
+  --p-ink-soft: #6b4a3d;
+  --p-line: rgba(44, 22, 17, 0.24);
+  --p-accent: #d1320e;
+  --p-accent-2: #fca91a;
+  --p-on-accent: #ffffff;
+}
+
+/* Duas cores de "marca" por produto, usadas em pequenos elementos gráficos (ex.: hero da Home). */
+[data-product='anilha'] {
+  --p-mark-a: #121417;
+  --p-mark-b: #b7ff3b;
+}
+
+[data-product='entregamanager'] {
+  --p-mark-a: #1e5bd6;
+  --p-mark-b: #ff7a00;
+}
+
+[data-product='trampo-facil'] {
+  --p-mark-a: #0269e1;
+  --p-mark-b: #000931;
+}
+
+[data-product='e-massa-delivery'] {
+  --p-mark-a: #d1320e;
+  --p-mark-b: #fca91a;
+}

@@ -1,0 +1,133 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-raised);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--p-accent);
+}
+
+.brandPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 192px;
+  padding: var(--space-5);
+  background: var(--p-bg);
+  border-bottom: 3px solid var(--p-accent);
+  border-image: linear-gradient(90deg, var(--p-accent), var(--p-accent-2)) 1;
+  border-image-width: 0 0 3px 0;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  height: var(--logo-h);
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: var(--space-5) var(--space-6) var(--space-6);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.name {
+  font-size: var(--fs-lg);
+}
+
+.endorsement {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  color: var(--color-ink-faint);
+}
+
+.status {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  color: var(--color-ink-soft);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.statusProduction {
+  color: var(--color-success);
+  background: var(--color-success-soft);
+  border-color: transparent;
+}
+
+.statusDevelopment {
+  color: var(--color-progress);
+  background: var(--color-progress-soft);
+  border-color: transparent;
+}
+
+.tagline {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-ink);
+  margin-bottom: var(--space-3);
+}
+
+.description {
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+  line-height: var(--lh-normal);
+  flex-grow: 1;
+}
+
+.footer {
+  margin-top: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-ink);
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.card:hover .footer {
+  color: var(--color-accent);
+}
+
+@media (max-width: 480px) {
+  .brandPanel {
+    height: 164px;
+    padding: var(--space-4);
+  }
+
+  .logo {
+    height: calc(var(--logo-h) * 0.82);
+  }
+}

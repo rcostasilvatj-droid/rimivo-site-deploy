@@ -1,0 +1,28 @@
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logoImg {
+  display: block;
+  height: 28px;
+  width: auto;
+}
+
+.light {
+  display: block;
+}
+
+.dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .light {
+    display: none;
+  }
+
+  .dark {
+    display: block;
+  }
+}

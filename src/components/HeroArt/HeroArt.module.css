@@ -1,0 +1,90 @@
+.art {
+  --size: 380px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  flex-shrink: 0;
+}
+
+.glow {
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 32% 28%,
+      color-mix(in srgb, var(--color-accent) 22%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      circle at 70% 74%,
+      color-mix(in srgb, #2cd1a1 18%, transparent),
+      transparent 60%
+    );
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-strong);
+  transform: translate(-50%, -50%);
+}
+
+.ringOuter {
+  width: 100%;
+  height: 100%;
+}
+
+.ringMiddle {
+  width: 67%;
+  height: 67%;
+}
+
+.ringInner {
+  width: 36%;
+  height: 36%;
+  border-style: dashed;
+}
+
+.productDot,
+.brandDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--s);
+  height: var(--s);
+  margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+  border-radius: 50%;
+  transform: rotate(var(--a)) translateX(calc(var(--size) * var(--r)));
+}
+
+.productDot {
+  background: linear-gradient(135deg, var(--p-mark-a) 50%, var(--p-mark-b) 50%);
+  box-shadow:
+    0 0 0 3px var(--color-bg),
+    0 0 0 4px var(--color-border-strong),
+    var(--shadow-sm);
+}
+
+.brandDot {
+  background: var(--c);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22%;
+  height: 22%;
+  transform: translate(-50%, -50%);
+  border-radius: 22%;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 1080px) {
+  .art {
+    --size: 320px;
+  }
+}
